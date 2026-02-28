@@ -1,17 +1,12 @@
-function operation(process,a,b)
-{
-    return process(a,b)
-}
+function calculator(a, b, callback) {
+    return callback(a, b);
+}   
+function add(a, b) {
+    return a + b;
+}                           
 
-function add(a,b)
-{
-    return a+b;
+function subtract(a, b) {
+    return a - b;
 }
-
-function muply(a,b)
-{
-    return a*b;
-}
-console.log (operation(muply,50,10))
-
-console.log (operation(add,50,10))
+console.log(calculator(10, 5, add)); 
+console.log(calculator(10, 5, subtract));

@@ -1,5 +1,23 @@
-function add(a,b)
+function add(a,b,c)
 {
-    return(a+b)
+    return a+b+c;
 }
-console.log (add(50,10))
+
+let result = add(5,5,50)
+console.log(result)
+
+
+
+function oddOrEven(a)
+{
+    if(a%2==0)
+    {
+        return "Even";
+    }
+    else
+    {
+        return "Odd";
+    }
+}
+
+console.log(oddOrEven(5));

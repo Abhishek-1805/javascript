@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ABHI</title>
 </head>
+
 <body>
-    <h1>This Is First Para</h1>
+    <button id="sj">1</button>
+
+    <script>
+        let btn = document.getElementById("sj");
+
+        btn.addEventListener("click", (event) => {
+            btn.textContent = "Hii";
+            console.log("clicked");
+        });
+
+        document.addEventListener('keydown', (event) => {
+            console.log(event.key);
+
+            if (event.key === "ArrowUp") {
+                btn.textContent = Number(btn.textContent) + 1;
+            } else {
+                btn.textContent = Number(btn.textContent) - 1;
+            }
+        });
+    </script>
 </body>
-<script>
-     console.log("Hello")
-</script>
-<script>alert("Have a fun")</script>
-<script src="/first.js">
-</script>
 </html>
